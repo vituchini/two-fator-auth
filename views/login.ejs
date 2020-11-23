@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Логін</title>
+</head>
+<body>
+<div class="decor">
+  <div class="form-left-decoration"></div>
+  <div class="form-right-decoration"></div>
+  <div class="circle"></div>
+  <div class="form-inner">
+    <h3>Логін</h3>
+    <% if (messages.error) { %>
+      <%= messages.error %>
+    <% } %>
+    <form action="/login" method="POST">
+      <input type="email" placeholder="Email" id="email" name="email" required>
+      <input type="password" placeholder="Password" id="password" name="password" required>
+      <input type="submit" value="Увійти!">
+      Нема акаунту? Тицяй сюди => <a href="/register">Реєстрація</a>
+
+    </form>
+  </div>
+</div>
+</body>
+</html>
